@@ -32,11 +32,11 @@ child-qsort: exit(72)
 child-qsort: exit(72)
 (page-merge-stk) wait for child 0
 (page-merge-stk) wait for child 1
-child-qsort: exit(72)
 (page-merge-stk) wait for child 2
-child-qsort: exit(72)
 (page-merge-stk) wait for child 3
+child-qsort: exit(72)
 (page-merge-stk) wait for child 4
+child-qsort: exit(72)
 (page-merge-stk) wait for child 5
 (page-merge-stk) wait for child 6
 (page-merge-stk) wait for child 7
@@ -46,8 +46,8 @@ child-qsort: exit(72)
 (page-merge-stk) end
 page-merge-stk: exit(0)
 Execution of 'page-merge-stk' complete.
-Timer: 1137 ticks
-Thread: 75 idle ticks, 53 kernel ticks, 1009 user ticks
+Timer: 1185 ticks
+Thread: 84 idle ticks, 55 kernel ticks, 1046 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 4840 reads, 6953 writes
 hd1:0: 224 reads, 0 writes

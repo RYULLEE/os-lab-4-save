@@ -1,12 +1,12 @@
 FAIL
 Kernel panic in run: PANIC at ../../devices/disk.c:411 in select_sector(): assertion `sec_no < d->capacity' failed.
-Call stack: 0x80042144ba 0x8004210593 0x800420fcf4 0x800421d6ca 0x800421aa84 0x7878787878787878
+Call stack: 0x80042144ba 0x8004210593 0x800420fcf4 0x800421d7cb 0x800421aab0 0x7878787878787878
 Translation of call stack:
 0x00000080042144ba: debug_panic (lib/kernel/debug.c:32)
 0x0000008004210593: select_sector (devices/disk.c:412)
 0x000000800420fcf4: disk_write (devices/disk.c:244)
-0x000000800421d6ca: inode_create_fs (filesys/inode.c:141)
-0x000000800421aa84: filesys_create (filesys/filesys.c:85 (discriminator 1))
+0x000000800421d7cb: inode_create_fs (filesys/inode.c:141)
+0x000000800421aab0: filesys_create (filesys/filesys.c:91)
 0x7878787878787878: (unknown)
 
 This assertion commonly fails when accessing a file via an inode that

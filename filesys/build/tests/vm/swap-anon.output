@@ -1246,12 +1246,12 @@ r11 0000000000000202 r12 0000010426a00000 r13 0000800426a00000 r14 0000800422de1
 r15 0000800426aef000 rflags 00000202
 es: 0010 ds: 0010 cs: 0008 ss: 0010
 Kernel PANIC at ../../userprog/exception.c:97 in kill(): Kernel bug - unexpected interrupt in kernel
-Call stack: 0x80042144ba 0x8004219401 0x800420972c 0x8004209b4a 0x800422429a 0x8004222dcb 0x8004216a88 0x8004223d64 0x80042182df 0x80042182ab 0x80042073c8 0x8004219b02 0x800421952b 0x800420972c 0x8004209b4a.
+Call stack: 0x80042144ba 0x8004219401 0x800420972c 0x8004209b4a 0x800422439b 0x8004222ecc 0x8004216a88 0x8004223e65 0x80042182df 0x80042182ab 0x80042073c8 0x8004219b02 0x800421952b 0x800420972c 0x8004209b4a.
 The `backtrace' program can make call stacks useful.
 Read "Backtraces" in the "Debugging Tools" chapter
 of the Pintos documentation for more information.
-Timer: 349 ticks
-Thread: 34 idle ticks, 49 kernel ticks, 266 user ticks
+Timer: 351 ticks
+Thread: 30 idle ticks, 53 kernel ticks, 269 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 208 reads, 527 writes
 hd1:0: 104 reads, 0 writes

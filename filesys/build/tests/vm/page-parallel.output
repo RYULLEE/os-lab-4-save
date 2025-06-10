@@ -26,8 +26,8 @@ child-linear: exit(66)
 (page-parallel) end
 page-parallel: exit(0)
 Execution of 'page-parallel' complete.
-Timer: 202 ticks
-Thread: 35 idle ticks, 53 kernel ticks, 114 user ticks
+Timer: 201 ticks
+Thread: 37 idle ticks, 54 kernel ticks, 110 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 336 reads, 739 writes
 hd1:0: 209 reads, 0 writes
