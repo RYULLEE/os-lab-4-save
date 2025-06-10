@@ -24,10 +24,10 @@ Executing 'lg-full':
 (lg-full) end
 lg-full: exit(0)
 Execution of 'lg-full' complete.
-Timer: 124 ticks
-Thread: 37 idle ticks, 52 kernel ticks, 35 user ticks
+Timer: 122 ticks
+Thread: 40 idle ticks, 51 kernel ticks, 31 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 366 reads, 831 writes
+hd0:1: 366 reads, 837 writes
 hd1:0: 106 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1128 characters output

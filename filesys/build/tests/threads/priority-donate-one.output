@@ -23,7 +23,7 @@ Executing 'priority-donate-one':
 (priority-donate-one) end
 Execution of 'priority-donate-one' complete.
 Timer: 83 ticks
-Thread: 32 idle ticks, 51 kernel ticks, 0 user ticks
+Thread: 34 idle ticks, 49 kernel ticks, 0 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 159 reads, 317 writes
 hd1:1: 0 reads, 0 writes

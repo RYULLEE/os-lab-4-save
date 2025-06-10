@@ -27,10 +27,10 @@ Executing 'symlink-link':
 (symlink-link) read of 512 bytes at offset 0 in "file" returned 0: FAILED
 symlink-link: exit(1)
 Execution of 'symlink-link' complete.
-Timer: 124 ticks
-Thread: 34 idle ticks, 57 kernel ticks, 33 user ticks
+Timer: 123 ticks
+Thread: 35 idle ticks, 56 kernel ticks, 32 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 240 reads, 690 writes
+hd0:1: 240 reads, 699 writes
 hd1:0: 227 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1416 characters output

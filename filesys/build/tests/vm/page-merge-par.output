@@ -4,7 +4,7 @@ Kernel command line: -q -f put page-merge-par put child-sort run page-merge-par
 Pintos booting with: 
 	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
 	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
-Calibrating timer...  157,081,600 loops/s.
+Calibrating timer...  78,540,800 loops/s.
 hd0:0: detected 353 sector (176 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 20,160 sector (9 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 218 sector (109 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -18,24 +18,24 @@ Executing 'page-merge-par':
 (page-merge-par) init
 (page-merge-par) sort chunk 0
 (page-merge-par) sort chunk 1
-(page-merge-par) sort chunk 2
 child-sort: exit(123)
+(page-merge-par) sort chunk 2
 child-sort: exit(123)
 (page-merge-par) sort chunk 3
 (page-merge-par) sort chunk 4
+child-sort: exit(123)
 (page-merge-par) sort chunk 5
 child-sort: exit(123)
 (page-merge-par) sort chunk 6
 child-sort: exit(123)
-child-sort: exit(123)
-child-sort: exit(123)
 (page-merge-par) sort chunk 7
-(page-merge-par) wait for child 0
 child-sort: exit(123)
+(page-merge-par) wait for child 0
 (page-merge-par) wait for child 1
+child-sort: exit(123)
+child-sort: exit(123)
 (page-merge-par) wait for child 2
 (page-merge-par) wait for child 3
-child-sort: exit(123)
 (page-merge-par) wait for child 4
 (page-merge-par) wait for child 5
 (page-merge-par) wait for child 6
@@ -46,13 +46,13 @@ child-sort: exit(123)
 (page-merge-par) end
 page-merge-par: exit(0)
 Execution of 'page-merge-par' complete.
-Timer: 1008 ticks
-Thread: 98 idle ticks, 53 kernel ticks, 857 user ticks
+Timer: 1055 ticks
+Thread: 98 idle ticks, 51 kernel ticks, 906 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 4826 reads, 6943 writes
+hd0:1: 4825 reads, 6993 writes
 hd1:0: 218 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1857 characters output
+Console: 1856 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

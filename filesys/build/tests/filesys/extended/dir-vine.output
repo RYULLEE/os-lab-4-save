@@ -19,10 +19,10 @@ Executing 'dir-vine':
 (dir-vine) readdir "." (should fail): FAILED
 dir-vine: exit(1)
 Execution of 'dir-vine' complete.
-Timer: 92 ticks
-Thread: 37 idle ticks, 51 kernel ticks, 4 user ticks
+Timer: 93 ticks
+Thread: 32 idle ticks, 57 kernel ticks, 4 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 143 reads, 544 writes
+hd0:1: 143 reads, 556 writes
 hd1:0: 230 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1076 characters output

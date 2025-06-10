@@ -19,9 +19,9 @@ Executing 'open-normal':
 open-normal: exit(0)
 Execution of 'open-normal' complete.
 Timer: 84 ticks
-Thread: 30 idle ticks, 51 kernel ticks, 3 user ticks
+Thread: 35 idle ticks, 47 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 218 reads, 531 writes
+hd0:1: 218 reads, 537 writes
 hd1:0: 105 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1024 characters output

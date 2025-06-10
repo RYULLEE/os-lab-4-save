@@ -28,10 +28,10 @@ Executing 'page-shuffle':
 (page-shuffle) end
 page-shuffle: exit(0)
 Execution of 'page-shuffle' complete.
-Timer: 215 ticks
-Thread: 34 idle ticks, 51 kernel ticks, 130 user ticks
+Timer: 217 ticks
+Thread: 34 idle ticks, 54 kernel ticks, 129 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 214 reads, 545 writes
+hd0:1: 214 reads, 548 writes
 hd1:0: 113 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1440 characters output

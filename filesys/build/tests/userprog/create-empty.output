@@ -18,10 +18,10 @@ Executing 'create-empty':
 (create-empty) end
 create-empty: exit(0)
 Execution of 'create-empty' complete.
-Timer: 90 ticks
-Thread: 36 idle ticks, 50 kernel ticks, 4 user ticks
+Timer: 85 ticks
+Thread: 31 idle ticks, 51 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 208 reads, 523 writes
+hd0:1: 208 reads, 527 writes
 hd1:0: 102 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1001 characters output

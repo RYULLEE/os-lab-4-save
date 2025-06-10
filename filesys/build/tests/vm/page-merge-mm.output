@@ -32,8 +32,8 @@ child-qsort-mm: exit(80)
 (page-merge-mm) sort chunk 7
 child-qsort-mm: exit(80)
 (page-merge-mm) wait for child 0
-child-qsort-mm: exit(80)
 (page-merge-mm) wait for child 1
+child-qsort-mm: exit(80)
 (page-merge-mm) wait for child 2
 (page-merge-mm) wait for child 3
 (page-merge-mm) wait for child 4
@@ -42,16 +42,17 @@ child-qsort-mm: exit(80)
 (page-merge-mm) wait for child 7
 (page-merge-mm) merge
 (page-merge-mm) verify
-(page-merge-mm) bad value 1 in byte 2514: FAILED
-page-merge-mm: exit(1)
+(page-merge-mm) success, buf_idx=1,048,576
+(page-merge-mm) end
+page-merge-mm: exit(0)
 Execution of 'page-merge-mm' complete.
-Timer: 515 ticks
-Thread: 61 idle ticks, 59 kernel ticks, 395 user ticks
+Timer: 566 ticks
+Thread: 94 idle ticks, 61 kernel ticks, 411 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 4840 reads, 6944 writes
+hd0:1: 4837 reads, 7005 writes
 hd1:0: 224 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1846 characters output
+Console: 1860 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

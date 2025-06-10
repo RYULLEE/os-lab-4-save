@@ -19,10 +19,9 @@ Executing 'page-merge-stk':
 (page-merge-stk) sort chunk 0
 (page-merge-stk) sort chunk 1
 (page-merge-stk) sort chunk 2
-child-qsort: exit(72)
 (page-merge-stk) sort chunk 3
-child-qsort: exit(72)
 (page-merge-stk) sort chunk 4
+child-qsort: exit(72)
 (page-merge-stk) sort chunk 5
 child-qsort: exit(72)
 (page-merge-stk) sort chunk 6
@@ -32,12 +31,13 @@ child-qsort: exit(72)
 child-qsort: exit(72)
 (page-merge-stk) wait for child 0
 (page-merge-stk) wait for child 1
+child-qsort: exit(72)
 (page-merge-stk) wait for child 2
+child-qsort: exit(72)
 (page-merge-stk) wait for child 3
-child-qsort: exit(72)
 (page-merge-stk) wait for child 4
-child-qsort: exit(72)
 (page-merge-stk) wait for child 5
+child-qsort: exit(72)
 (page-merge-stk) wait for child 6
 (page-merge-stk) wait for child 7
 (page-merge-stk) merge
@@ -46,10 +46,10 @@ child-qsort: exit(72)
 (page-merge-stk) end
 page-merge-stk: exit(0)
 Execution of 'page-merge-stk' complete.
-Timer: 1185 ticks
-Thread: 84 idle ticks, 55 kernel ticks, 1046 user ticks
+Timer: 1110 ticks
+Thread: 43 idle ticks, 55 kernel ticks, 1012 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 4840 reads, 6953 writes
+hd0:1: 4840 reads, 7005 writes
 hd1:0: 224 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1860 characters output

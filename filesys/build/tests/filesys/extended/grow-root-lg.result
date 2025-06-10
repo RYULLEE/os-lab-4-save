@@ -1,6 +1,6 @@
 FAIL
 Kernel panic in run: PANIC at ../../threads/synch.c:224 in lock_acquire(): assertion `!lock_held_by_current_thread (lock)' failed.
-Call stack: 0x80042144ba 0x800420ace3 0x800421a1d1 0x8004218227 0x80042073c8 0x8004219b02 0x800421952b 0x800420972c 0x8004209b4a 0x800421d4e2 0x800421dd44 0x800421d132 0x800421aad4 0x8004219caa 0x80042197a0 0x80042195a0 0x400ca2 0x4001b3 0x400eb9 0x400f02
+Call stack: 0x80042144ba 0x800420ace3 0x800421a1d1 0x8004218227 0x80042073c8 0x8004219b02 0x800421952b 0x800420972c 0x8004209b4a 0x800421d4e2 0x800421dd66 0x800421d132 0x800421aad4 0x8004219caa 0x80042197a0 0x80042195a0 0x400ca2 0x4001b3 0x400eb9 0x400f02
 Translation of call stack:
 0x00000080042144ba: debug_panic (lib/kernel/debug.c:32)
 0x000000800420ace3: lock_acquire (threads/synch.c:227)
@@ -12,7 +12,7 @@ Translation of call stack:
 0x000000800420972c: intr_handler (threads/interrupt.c:352)
 0x0000008004209b4a: intr_entry (threads/intr-stubs.o:?)
 0x000000800421d4e2: byte_to_sector (filesys/inode.c:61)
-0x000000800421dd44: inode_write_at (filesys/inode.c:313)
+0x000000800421dd66: inode_write_at (filesys/inode.c:316)
 0x000000800421d132: dir_add (filesys/directory.c:160)
 0x000000800421aad4: filesys_create (filesys/filesys.c:91 (discriminator 1))
 0x0000008004219caa: create (userprog/syscall.c:190)

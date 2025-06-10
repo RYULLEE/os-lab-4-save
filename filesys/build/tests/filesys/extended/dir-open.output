@@ -22,10 +22,10 @@ Executing 'dir-open':
 (dir-open) write "xyzzy" (must return -1, actually 6): FAILED
 dir-open: exit(1)
 Execution of 'dir-open' complete.
-Timer: 90 ticks
-Thread: 30 idle ticks, 56 kernel ticks, 4 user ticks
+Timer: 87 ticks
+Thread: 36 idle ticks, 48 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 109 reads, 523 writes
+hd0:1: 109 reads, 530 writes
 hd1:0: 223 reads, 0 writes
 hd1:1: 0 reads, 0 writes
 Console: 1161 characters output
