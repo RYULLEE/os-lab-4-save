@@ -22,8 +22,8 @@ Executing 'bc-easy':
 (bc-easy) check read_cnt: FAILED
 bc-easy: exit(1)
 Execution of 'bc-easy' complete.
-Timer: 663 ticks
-Thread: 242 idle ticks, 50 kernel ticks, 371 user ticks
+Timer: 608 ticks
+Thread: 150 idle ticks, 58 kernel ticks, 400 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 12390 reads, 4639 writes
 hd1:0: 227 reads, 0 writes

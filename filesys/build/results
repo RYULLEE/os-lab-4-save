@@ -68,7 +68,7 @@ pass tests/userprog/wait-simple
 pass tests/userprog/wait-twice
 pass tests/userprog/wait-killed
 pass tests/userprog/wait-bad-pid
-pass tests/userprog/multi-recurse
+FAIL tests/userprog/multi-recurse
 FAIL tests/userprog/multi-child-fd
 pass tests/userprog/rox-simple
 pass tests/userprog/rox-child
@@ -93,10 +93,10 @@ FAIL tests/filesys/base/syn-read
 pass tests/filesys/base/syn-remove
 pass tests/filesys/base/syn-write
 pass tests/filesys/extended/dir-empty-name
-FAIL tests/filesys/extended/dir-mk-tree
+pass tests/filesys/extended/dir-mk-tree
 FAIL tests/filesys/extended/dir-mkdir
 FAIL tests/filesys/extended/dir-open
-FAIL tests/filesys/extended/dir-over-file
+pass tests/filesys/extended/dir-over-file
 FAIL tests/filesys/extended/dir-rm-cwd
 FAIL tests/filesys/extended/dir-rm-parent
 pass tests/filesys/extended/dir-rm-root
@@ -105,7 +105,7 @@ FAIL tests/filesys/extended/dir-rmdir
 pass tests/filesys/extended/dir-under-file
 FAIL tests/filesys/extended/dir-vine
 pass tests/filesys/extended/grow-create
-FAIL tests/filesys/extended/grow-dir-lg
+pass tests/filesys/extended/grow-dir-lg
 pass tests/filesys/extended/grow-file-size
 FAIL tests/filesys/extended/grow-root-lg
 pass tests/filesys/extended/grow-root-sm
@@ -116,7 +116,7 @@ FAIL tests/filesys/extended/grow-tell
 pass tests/filesys/extended/grow-two-files
 pass tests/filesys/extended/syn-rw
 FAIL tests/filesys/extended/symlink-file
-FAIL tests/filesys/extended/symlink-dir
+pass tests/filesys/extended/symlink-dir
 FAIL tests/filesys/extended/symlink-link
 pass tests/vm/pt-grow-stack
 pass tests/vm/pt-grow-bad
@@ -131,7 +131,7 @@ pass tests/vm/page-parallel
 FAIL tests/vm/page-merge-seq
 pass tests/vm/page-merge-par
 pass tests/vm/page-merge-stk
-pass tests/vm/page-merge-mm
+FAIL tests/vm/page-merge-mm
 pass tests/vm/page-shuffle
 pass tests/vm/mmap-read
 pass tests/vm/mmap-close

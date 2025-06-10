@@ -4,7 +4,7 @@ Kernel command line: -q -f put grow-dir-lg put tar run grow-dir-lg
 Pintos booting with: 
 	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
 	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
-Calibrating timer...  104,755,200 loops/s.
+Calibrating timer...  157,081,600 loops/s.
 hd0:0: detected 353 sector (176 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 224 sector (112 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -16,21 +16,66 @@ Putting 'tar' into the file system...
 Executing 'grow-dir-lg':
 (grow-dir-lg) begin
 (grow-dir-lg) mkdir /x
-Interrupt 0x0d (#GP General Protection Exception) at rip=800421d89f
- cr2=000000000040235d error=               0
-rax 7269646b6d00782f rbx 0000800424f21800 rcx 000000000000001a rdx 0000000000000014
-rsp 000000800424fd88 rbp 000000800424fd90 rsi 0000000000000014 rdi 7269646b6d00782f
-rip 000000800421d89f r8 0000000000000000  r9 0000000000000000 r10 0000000000000000
-r11 0000000000000212 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
-r15 0000800424fef000 rflags 00000216
-es: 001b ds: 001b cs: 0008 ss: 0010
-Kernel PANIC at ../../userprog/exception.c:97 in kill(): Kernel bug - unexpected interrupt in kernel
-Call stack: 0x80042144ba 0x8004219401 0x800420972c 0x8004209b4a 0x800421b492 0x800421a4b3 0x80042199b4 0x80042195a0 0x400139 0x400f20 0x400f69 0Interrupt 0x0d (#GP General Protection Exception) at rip=80042114f4
- cr2=000000000040235d error=               0
-rax 0000800424ff6000 rbx 0000800424f21800 rcx 00000080040b8000 rdx 00000000000003d4
-rsp 000000800424fbc0 rbp 000000800424fbd0 rsi 000000000000c00f rdi 0000000000000000
-rip 00000080042114f4 r8 000000800424fad8  r9 00000080042179f7 r10 0000000000000000
-r11 0000000000000212 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
-r15 0000800424fef000 rflags 00000006
-es: 0010 ds: 0010 cs: 0008 ss: 0010
-Kernel PANIC recursion at ../../userprog/exception.c:97 in kill().
+(grow-dir-lg) creating and checking "/x/file0"
+(grow-dir-lg) creating and checking "/x/file1"
+(grow-dir-lg) creating and checking "/x/file2"
+(grow-dir-lg) creating and checking "/x/file3"
+(grow-dir-lg) creating and checking "/x/file4"
+(grow-dir-lg) creating and checking "/x/file5"
+(grow-dir-lg) creating and checking "/x/file6"
+(grow-dir-lg) creating and checking "/x/file7"
+(grow-dir-lg) creating and checking "/x/file8"
+(grow-dir-lg) creating and checking "/x/file9"
+(grow-dir-lg) creating and checking "/x/file10"
+(grow-dir-lg) creating and checking "/x/file11"
+(grow-dir-lg) creating and checking "/x/file12"
+(grow-dir-lg) creating and checking "/x/file13"
+(grow-dir-lg) creating and checking "/x/file14"
+(grow-dir-lg) creating and checking "/x/file15"
+(grow-dir-lg) creating and checking "/x/file16"
+(grow-dir-lg) creating and checking "/x/file17"
+(grow-dir-lg) creating and checking "/x/file18"
+(grow-dir-lg) creating and checking "/x/file19"
+(grow-dir-lg) creating and checking "/x/file20"
+(grow-dir-lg) creating and checking "/x/file21"
+(grow-dir-lg) creating and checking "/x/file22"
+(grow-dir-lg) creating and checking "/x/file23"
+(grow-dir-lg) creating and checking "/x/file24"
+(grow-dir-lg) creating and checking "/x/file25"
+(grow-dir-lg) creating and checking "/x/file26"
+(grow-dir-lg) creating and checking "/x/file27"
+(grow-dir-lg) creating and checking "/x/file28"
+(grow-dir-lg) creating and checking "/x/file29"
+(grow-dir-lg) creating and checking "/x/file30"
+(grow-dir-lg) creating and checking "/x/file31"
+(grow-dir-lg) creating and checking "/x/file32"
+(grow-dir-lg) creating and checking "/x/file33"
+(grow-dir-lg) creating and checking "/x/file34"
+(grow-dir-lg) creating and checking "/x/file35"
+(grow-dir-lg) creating and checking "/x/file36"
+(grow-dir-lg) creating and checking "/x/file37"
+(grow-dir-lg) creating and checking "/x/file38"
+(grow-dir-lg) creating and checking "/x/file39"
+(grow-dir-lg) creating and checking "/x/file40"
+(grow-dir-lg) creating and checking "/x/file41"
+(grow-dir-lg) creating and checking "/x/file42"
+(grow-dir-lg) creating and checking "/x/file43"
+(grow-dir-lg) creating and checking "/x/file44"
+(grow-dir-lg) creating and checking "/x/file45"
+(grow-dir-lg) creating and checking "/x/file46"
+(grow-dir-lg) creating and checking "/x/file47"
+(grow-dir-lg) creating and checking "/x/file48"
+(grow-dir-lg) creating and checking "/x/file49"
+(grow-dir-lg) end
+grow-dir-lg: exit(0)
+Execution of 'grow-dir-lg' complete.
+Timer: 313 ticks
+Thread: 97 idle ticks, 47 kernel ticks, 169 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 6414 reads, 975 writes
+hd1:0: 224 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 3427 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

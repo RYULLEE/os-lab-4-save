@@ -16,15 +16,18 @@ Putting 'tar' into the file system...
 Executing 'dir-mk-tree':
 (dir-mk-tree) begin
 (dir-mk-tree) creating /0/0/0/0 through /3/2/2/3...
-dir-mk-tree: exit(-1)
+(dir-mk-tree) open "/0/2/0/3"
+(dir-mk-tree) close "/0/2/0/3"
+(dir-mk-tree) end
+dir-mk-tree: exit(0)
 Execution of 'dir-mk-tree' complete.
-Timer: 93 ticks
-Thread: 32 idle ticks, 59 kernel ticks, 2 user ticks
+Timer: 268 ticks
+Thread: 90 idle ticks, 53 kernel ticks, 125 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 103 reads, 529 writes
+hd0:1: 4780 reads, 1594 writes
 hd1:0: 228 reads, 0 writes
 hd1:1: 0 reads, 0 writes
-Console: 1045 characters output
+Console: 1128 characters output
 Keyboard: 0 keys pressed
-Exception: 1 page faults
+Exception: 0 page faults
 Powering off...

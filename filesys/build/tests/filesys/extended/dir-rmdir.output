@@ -16,21 +16,18 @@ Putting 'tar' into the file system...
 Executing 'dir-rmdir':
 (dir-rmdir) begin
 (dir-rmdir) mkdir "a"
-Interrupt 0x0d (#GP General Protection Exception) at rip=800421d89f
- cr2=0000000000402308 error=               0
-rax 207269646d720061 rbx 0000800424f21800 rcx 000000000000001a rdx 0000000000000014
-rsp 000000800424fd88 rbp 000000800424fd90 rsi 0000000000000014 rdi 207269646d720061
-rip 000000800421d89f r8 0000000000000000  r9 0000000000000000 r10 0000000000000000
-r11 0000000000000212 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
-r15 0000800424fef000 rflags 00000216
-es: 001b ds: 001b cs: 0008 ss: 0010
-Kernel PANIC at ../../userprog/exception.c:97 in kill(): Kernel bug - unexpected interrupt in kernel
-Call stack: 0x80042144ba 0x8004219401 0x800420972c 0x8004209b4a 0x800421b492 0x800421a4b3 0x80042199b4 0x80042195a0 0x40011d 0x400ecb 0x400f14 0Interrupt 0x0d (#GP General Protection Exception) at rip=80042114f4
- cr2=0000000000402308 error=               0
-rax 0000800424ff6000 rbx 0000800424f21800 rcx 00000080040b8000 rdx 00000000000003d4
-rsp 000000800424fbc0 rbp 000000800424fbd0 rsi 000000000000c00f rdi 0000000000000000
-rip 00000080042114f4 r8 000000800424fad8  r9 00000080042179f7 r10 0000000000000000
-r11 0000000000000212 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
-r15 0000800424fef000 rflags 00000006
-es: 0010 ds: 0010 cs: 0008 ss: 0010
-Kernel PANIC recursion at ../../userprog/exception.c:97 in kill().
+(dir-rmdir) rmdir "a"
+(dir-rmdir) chdir "a" (must return false)
+(dir-rmdir) chdir "a" (must return false): FAILED
+dir-rmdir: exit(1)
+Execution of 'dir-rmdir' complete.
+Timer: 85 ticks
+Thread: 30 idle ticks, 51 kernel ticks, 4 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 112 reads, 521 writes
+hd1:0: 223 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1114 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

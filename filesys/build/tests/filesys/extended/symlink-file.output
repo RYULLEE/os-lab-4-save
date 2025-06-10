@@ -27,8 +27,8 @@ Executing 'symlink-file':
 (symlink-file) write 1012 bytes at offset 0 in "a" returned 0: FAILED
 symlink-file: exit(1)
 Execution of 'symlink-file' complete.
-Timer: 93 ticks
-Thread: 37 idle ticks, 51 kernel ticks, 5 user ticks
+Timer: 99 ticks
+Thread: 35 idle ticks, 58 kernel ticks, 6 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 186 reads, 538 writes
 hd1:0: 229 reads, 0 writes

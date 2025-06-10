@@ -1,2 +1,8 @@
 FAIL
-Prerequisite test tests/filesys/extended/symlink-dir failed.
+Kernel panic in file system extraction run: PANIC at ../../filesys/fsutil.c:160 in fsutil_get(): fs.tar: open failed
+Call stack: 0x80042144ba 0x800421e781 0x80042068cc 0x8004206186
+Translation of call stack:
+0x00000080042144ba: debug_panic (lib/kernel/debug.c:32)
+0x000000800421e781: fsutil_get (filesys/fsutil.c:161)
+0x00000080042068cc: run_actions (threads/init.c:297)
+0x0000008004206186: main (threads/init.c:125)

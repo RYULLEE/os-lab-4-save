@@ -23,18 +23,18 @@ Executing 'syn-rw':
 (syn-rw) exec child 3 of 4: "child-syn-rw 2"
 (syn-rw) exec child 4 of 4: "child-syn-rw 3"
 child-syn-rw: exit(3)
-child-syn-rw: exit(0)
 child-syn-rw: exit(2)
-(syn-rw) wait for child 1 of 4 returned 0 (expected 0)
 child-syn-rw: exit(1)
+child-syn-rw: exit(0)
+(syn-rw) wait for child 1 of 4 returned 0 (expected 0)
 (syn-rw) wait for child 2 of 4 returned 1 (expected 1)
 (syn-rw) wait for child 3 of 4 returned 2 (expected 2)
 (syn-rw) wait for child 4 of 4 returned 3 (expected 3)
 (syn-rw) end
 syn-rw: exit(0)
 Execution of 'syn-rw' complete.
-Timer: 140 ticks
-Thread: 44 idle ticks, 57 kernel ticks, 39 user ticks
+Timer: 175 ticks
+Thread: 30 idle ticks, 56 kernel ticks, 89 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 882 reads, 1273 writes
 hd1:0: 343 reads, 0 writes
