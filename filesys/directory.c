@@ -6,6 +6,7 @@
 #include "filesys/inode.h"
 #include "threads/malloc.h"
 
+#include "filesys/fat.h"
 /* A directory. */
 struct dir {
 	struct inode *inode;                /* Backing store. */
@@ -23,7 +24,7 @@ struct dir_entry {
  * given SECTOR.  Returns true if successful, false on failure. */
 bool
 dir_create (disk_sector_t sector, size_t entry_cnt) {
-	return inode_create (sector, entry_cnt * sizeof (struct dir_entry));
+	return inode_create_fs (sector, entry_cnt * sizeof (struct dir_entry), DIRECTORY);
 }
 
 /* Opens and returns the directory for the given INODE, of which
@@ -46,7 +47,7 @@ dir_open (struct inode *inode) {
  * Return true if successful, false on failure. */
 struct dir *
 dir_open_root (void) {
-	return dir_open (inode_open (ROOT_DIR_SECTOR));
+	return dir_open(inode_open(cluster_to_sector(ROOT_DIR_CLUSTER)));
 }
 
 /* Opens and returns a new directory for the same inode as DIR.
@@ -175,6 +176,10 @@ dir_remove (struct dir *dir, const char *name) {
 	ASSERT (dir != NULL);
 	ASSERT (name != NULL);
 
+	// project 4 (don't remove directory if . or ..)
+	if (!strcmp(name, ".")) return false;
+	if (!strcmp(name, "..")) return false;
+
 	/* Find directory entry. */
 	if (!lookup (dir, name, &e, &ofs))
 		goto done;
@@ -210,6 +215,20 @@ dir_readdir (struct dir *dir, char name[NAME_MAX + 1]) {
 		if (e.in_use) {
 			strlcpy (name, e.name, NAME_MAX + 1);
 			return true;
+		}
+	}
+	return false;
+}
+bool
+dir_finddir(struct dir *dir, struct dir *dir_find, char name[NAME_MAX + 1]){
+	struct dir_entry e;
+	while (inode_read_at (dir->inode, &e, sizeof e, dir->pos) == sizeof e) {
+		dir->pos += sizeof e;
+		if (e.in_use) {
+			if(e.inode_sector == inode_sector(dir_find->inode)){
+				strlcpy (name, e.name, NAME_MAX + 1);
+				return true;
+			}
 		}
 	}
 	return false;

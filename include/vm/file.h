@@ -6,7 +6,11 @@
 struct page;
 enum vm_type;
 
+/* Project3 (Memory mapped files) */
 struct file_page {
+	struct file* file;
+	size_t page_read_bytes;
+	off_t offset;
 };
 
 void vm_file_init (void);

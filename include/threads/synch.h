@@ -38,6 +38,15 @@ void cond_wait (struct condition *, struct lock *);
 void cond_signal (struct condition *, struct lock *);
 void cond_broadcast (struct condition *, struct lock *);
 
+/* One semaphore in a list. */
+struct semaphore_elem {
+	struct list_elem elem;              /* List element. */
+	struct semaphore semaphore;         /* This semaphore. */
+};
+
+/* Project1 (Synchronization) */
+bool compare_sema_priority (const struct list_elem *e1, const struct list_elem *e2, void *aux);
+
 /* Optimization barrier.
  *
  * The compiler will not reorder operations across an

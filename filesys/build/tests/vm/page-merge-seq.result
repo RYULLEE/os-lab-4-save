@@ -1,0 +1,2 @@
+FAIL
+run: child[1] wait fail: FAILED

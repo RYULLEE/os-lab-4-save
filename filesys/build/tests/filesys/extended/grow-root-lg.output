@@ -1,0 +1,61 @@
+Kernel command line: -q -f put grow-root-lg put tar run grow-root-lg
+0 ~ 9fc00 1
+100000 ~ 13e0000 1
+Pintos booting with: 
+	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
+	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
+Calibrating timer...  150,937,600 loops/s.
+hd0:0: detected 353 sector (176 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 224 sector (112 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'grow-root-lg' into the file system...
+Putting 'tar' into the file system...
+Executing 'grow-root-lg':
+(grow-root-lg) begin
+(grow-root-lg) creating and checking "file0"
+(grow-root-lg) creating and checking "file1"
+(grow-root-lg) creating and checking "file2"
+(grow-root-lg) creating and checking "file3"
+(grow-root-lg) creating and checking "file4"
+(grow-root-lg) creating and checking "file5"
+(grow-root-lg) creating and checking "file6"
+(grow-root-lg) creating and checking "file7"
+(grow-root-lg) creating and checking "file8"
+(grow-root-lg) creating and checking "file9"
+(grow-root-lg) creating and checking "file10"
+(grow-root-lg) creating and checking "file11"
+(grow-root-lg) creating and checking "file12"
+(grow-root-lg) creating and checking "file13"
+(grow-root-lg) creating and checking "file14"
+(grow-root-lg) creating and checking "file15"
+(grow-root-lg) creating and checking "file16"
+(grow-root-lg) creating and checking "file17"
+(grow-root-lg) creating and checking "file18"
+(grow-root-lg) creating and checking "file19"
+(grow-root-lg) creating and checking "file20"
+(grow-root-lg) creating and checking "file21"
+(grow-root-lg) creating and checking "file22"
+(grow-root-lg) creating and checking "file23"
+grow-root-lg: exit(-1)
+Kernel PANIC at ../../threads/synch.c:224 in lock_acquire(): assertion `!lock_held_by_current_thread (lock)' failed.
+Call stack: 0x80042144ba 0x800420ace3 0x800421a1d1 0x8004218227 0x80042073c8 0x8004219b02 0x800421952b 0x800420972c 0x8004209b4a 0x800421d3c3 0x800421dc25 0x800421d013 0x800421aaa8 0x8004219caa 0x80042197a0 0x80042195a0 0x400ca2 0x4001b3 0x400eb9 0x400f02 0Interrupt 0x0d (#GP General Protection Exception) at rip=80042114f4
+ cr2=0000008404247f94 error=               0
+rax 0000800424ff6000 rbx 0000800424f21800 rcx 00000080040b8000 rdx 00000000000003d4
+rsp 000000800424fa10 rbp 000000800424fa20 rsi 000000000000910f rdi 0000000000000000
+rip 00000080042114f4 r8 000000800424f928  r9 00000080042179f7 r10 0000000000000000
+r11 0000000000000202 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
+r15 0000800424fef000 rflags 00000006
+es: 0010 ds: 0010 cs: 0008 ss: 0010
+Kernel PANIC recursion at ../../userprog/exception.c:97 in kill().
+Interrupt 0x0d (#GP General Protection Exception) at rip=8004214539
+ cr2=0000008404247f94 error=               0
+rax 894855c35d5b18c4 rbx 0000800424f21800 rcx 0000000000000200 rdx 0000000000000000
+rsp 000000800424f028 rbp 000000800424f030 rsi 0000000000000200 rdi 894855c35d5b18c4
+rip 0000008004214539 r8 0000008004225940  r9 00000080042143df r10 0000000000000000
+r11 0000000000000202 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
+r15 0000800424fef000 rflags 00000082
+es: 0010 ds: 0010 cs: 0008 ss: 0010
+Interrupt 0000 (#DE Divide Error) in unknown segment 0000

@@ -1,0 +1,35 @@
+Kernel command line: -q -f put open-bad-ptr run open-bad-ptr
+0 ~ 9fc00 1
+100000 ~ 13e0000 1
+Pintos booting with: 
+	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
+	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
+Calibrating timer...  155,648,000 loops/s.
+hd0:0: detected 337 sector (168 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 20,160 sector (9 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 103 sector (51 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'open-bad-ptr' into the file system...
+Executing 'open-bad-ptr':
+(open-bad-ptr) begin
+open-bad-ptr: exit(-1)
+Kernel PANIC at ../../threads/synch.c:224 in lock_acquire(): assertion `!lock_held_by_current_thread (lock)' failed.
+Call stack: 0x800421875c 0x800420accb 0x800421e370 0x800421c4c9 0x80042073b0 0x800421dca1 0x800421d7cd 0x8004209714 0x8004209b32 0x800421ffcd 0x8004220107 0x800421ea7d 0x800421def5 0x800421da90 0x800421d842 0x4000fd 0x400190 0x400c31 0Interrupt 0x0d (#GP General Protection Exception) at rip=8004215796
+ cr2=0000000020101234 error=               0
+rax 00008004245f6000 rbx 0000800424521800 rcx 00000080040b8000 rdx 00000000000003d4
+rsp 0000008004245b60 rbp 0000008004245b70 rsi 000000000000cb0f rdi 0000000000000000
+rip 0000008004215796 r8 0000008004245a78  r9 000000800421bc99 r10 0000000000000000
+r11 0000000000000212 r12 000000800421d919 r13 0000800424500000 r14 0000800422be1800
+r15 00008004245ef000 rflags 00000006
+es: 0010 ds: 0010 cs: 0008 ss: 0010
+Kernel PANIC recursion at ../../userprog/exception.c:97 in kill().
+Timer: 86 ticks
+Thread: 32 idle ticks, 51 kernel ticks, 3 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 82 reads, 234 writes
+hd1:0: 103 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1855 characters output
+Key

@@ -5,6 +5,7 @@
 #include <list.h>
 #include <stdint.h>
 #include "threads/interrupt.h"
+#include "threads/synch.h"
 #ifdef VM
 #include "vm/vm.h"
 #endif
@@ -27,6 +28,14 @@ typedef int tid_t;
 #define PRI_MIN 0                       /* Lowest priority. */
 #define PRI_DEFAULT 31                  /* Default priority. */
 #define PRI_MAX 63                      /* Highest priority. */
+
+/* Project1 (Advanced scheduler) */
+#define NICE_DEFAULT 0					/* Default Niceness */
+#define RECENT_CPU_DEFAULT 0			/* Default Recent CPU */
+#define LOAD_AVG_DEFAULT 0				/* Default Load average */
+
+/* Project2 (System Call) */
+#define FD_LIMIT 3 * (1 << 9)		/* Limit of file descriptor index */
 
 /* A kernel thread or user process.
  *
@@ -92,17 +101,55 @@ struct thread {
 	char name[16];                      /* Name (for debugging purposes). */
 	int priority;                       /* Priority. */
 
+	/* Project1 (Alarm clock) */
+	// The thread has to wake up in this tick
+	int64_t tick_wakeup;
+
+	/* Project1 (Donation) */
+	// Additional variables for priority donation
+	int original_priority; 				/* additional term to save priority before donation */
+	struct list donation;				/* list needed for multiple donation */
+	struct list_elem donation_elem; 	/* Element for 'donation' */
+	struct lock *lock_addr; 			/* address for lock that this thread is waiting for */
+
+	/* Project1 (Advanced scheduler) */
+	int niceness;						/* niceness of this thread */
+	int recent_cpu;						/* recent cpu of this thread */
+	struct list_elem adv_elem;			/* Element for advanced scheduler */
+
 	/* Shared between thread.c and synch.c. */
 	struct list_elem elem;              /* List element. */
 
 #ifdef USERPROG
 	/* Owned by userprog/process.c. */
 	uint64_t *pml4;                     /* Page map level 4 */
+	
+	/* Project2 (System Call) */
+	int exit_status;					// Thread's exit status
+	int fd_index;						// File descriptor index
+	struct file **fd_table;				// File descriptor table
+
+	struct file *run_file;				// Running file
+    struct intr_frame parent_if;		// intr_frame of parent process
+    struct list child_list;				// list of thread's children
+    struct list_elem child_elem;		// list element for child process
+
+    struct semaphore sema_fork;			// semaphore for fork
+    struct semaphore sema_exit;			// semaphore for exit
+    struct semaphore sema_wait;			// semaphore for wait
+
 #endif
 #ifdef VM
 	/* Table for whole virtual memory owned by thread. */
 	struct supplemental_page_table spt;
+
+	/* Project3 (Anonymous page) */
+	void *sp;							// pointer for current stack
+	void *sb;							// pointer for stack bottom
 #endif
+
+	// project 4
+	struct dir* dir;					// directory of this thread
 
 	/* Owned by thread.c. */
 	struct intr_frame tf;               /* Information for switching */
@@ -142,5 +189,28 @@ int thread_get_recent_cpu (void);
 int thread_get_load_avg (void);
 
 void do_iret (struct intr_frame *tf);
+
+/* Project1 (Alarm clock) */
+void thread_sleep(int64_t ticks);
+void thread_awake(int64_t ticks);
+void update_tick(int64_t ticks);
+int64_t next_tick(void);
+
+/* Project1 (Priority scheduling) */
+bool compare_priority (const struct list_elem *e1, const struct list_elem *e2, void *aux UNUSED);
+void test_max_priority(void);
+
+/* Project1 (Donation) */
+void donate_priority(void);
+void redo_priority(void);
+void remove_by_lock(struct lock *lock);
+
+/* Project1 (Advanced scheduler) */
+void advanced_priority(struct thread *t);
+void advanced_recent_cpu(struct thread *t);
+void advanced_load_avg(void);
+void advanced_increment(void);
+void advanced_recalculate_priority(void);
+void advanced_recalculate_recent_cpu(void);
 
 #endif /* threads/thread.h */

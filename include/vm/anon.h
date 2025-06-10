@@ -4,7 +4,9 @@
 struct page;
 enum vm_type;
 
+/* Project3 (Swap in/out) */
 struct anon_page {
+    size_t slot;
 };
 
 void vm_anon_init (void);

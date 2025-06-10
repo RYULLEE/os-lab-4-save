@@ -1,0 +1,36 @@
+Kernel command line: -q -f put dir-over-file put tar run dir-over-file
+0 ~ 9fc00 1
+100000 ~ 13e0000 1
+Pintos booting with: 
+	base_mem: 0x0 ~ 0x9fc00 (Usable: 639 kB)
+	ext_mem: 0x100000 ~ 0x13e0000 (Usable: 19,328 kB)
+Calibrating timer...  157,081,600 loops/s.
+hd0:0: detected 353 sector (176 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 223 sector (111 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'dir-over-file' into the file system...
+Putting 'tar' into the file system...
+Executing 'dir-over-file':
+(dir-over-file) begin
+(dir-over-file) mkdir "abc"
+Interrupt 0x0d (#GP General Protection Exception) at rip=800421d89f
+ cr2=00000000004022ba error=               0
+rax 6165726300636261 rbx 0000800424f21800 rcx 000000000000001a rdx 0000000000000014
+rsp 000000800424fd88 rbp 000000800424fd90 rsi 0000000000000014 rdi 6165726300636261
+rip 000000800421d89f r8 0000000000000000  r9 0000000000000000 r10 0000000000000000
+r11 0000000000000212 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
+r15 0000800424fef000 rflags 00000216
+es: 001b ds: 001b cs: 0008 ss: 0010
+Kernel PANIC at ../../userprog/exception.c:97 in kill(): Kernel bug - unexpected interrupt in kernel
+Call stack: 0x80042144ba 0x8004219401 0x800420972c 0x8004209b4a 0x800421b492 0x800421a4b3 0x80042199b4 0x80042195a0 0x40011d 0x400e7d 0x400ec6 0Interrupt 0x0d (#GP General Protection Exception) at rip=80042114f4
+ cr2=00000000004022ba error=               0
+rax 0000800424ff6000 rbx 0000800424f21800 rcx 00000080040b8000 rdx 00000000000003d4
+rsp 000000800424fbc0 rbp 000000800424fbd0 rsi 000000000000c00f rdi 0000000000000000
+rip 00000080042114f4 r8 000000800424fad8  r9 00000080042179f7 r10 0000000000000000
+r11 0000000000000212 r12 0000008004219677 r13 0000800424f00000 r14 0000800422de1800
+r15 0000800424fef000 rflags 00000006
+es: 0010 ds: 0010 cs: 0008 ss: 0010
+Kernel PANIC recursion at ../../userprog/exception.c:97 in kill().

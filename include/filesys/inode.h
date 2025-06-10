@@ -9,6 +9,7 @@ struct bitmap;
 
 void inode_init (void);
 bool inode_create (disk_sector_t, off_t);
+bool inode_create_fs (disk_sector_t, off_t, int32_t);
 struct inode *inode_open (disk_sector_t);
 struct inode *inode_reopen (struct inode *);
 disk_sector_t inode_get_inumber (const struct inode *);
@@ -19,5 +20,13 @@ off_t inode_write_at (struct inode *, const void *, off_t size, off_t offset);
 void inode_deny_write (struct inode *);
 void inode_allow_write (struct inode *);
 off_t inode_length (const struct inode *);
+
+int32_t inode_type(struct inode *);
+void inode_set_length(struct inode *inode, off_t length);
+disk_sector_t inode_sector(struct inode *inode);
+bool inode_removed(struct inode *);
+unsigned inode_magic(struct inode *inode);
+char *inode_path(struct inode *);
+struct inode *check_softlink(struct inode *);
 
 #endif /* filesys/inode.h */

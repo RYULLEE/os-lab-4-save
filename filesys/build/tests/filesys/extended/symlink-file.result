@@ -1,0 +1,2 @@
+FAIL
+run: write 1012 bytes at offset 0 in "a" returned 0: FAILED

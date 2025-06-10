@@ -93,8 +93,12 @@ timer_sleep (int64_t ticks) {
 	int64_t start = timer_ticks ();
 
 	ASSERT (intr_get_level () == INTR_ON);
-	while (timer_elapsed (start) < ticks)
-		thread_yield ();
+	/*while (timer_elapsed (start) < ticks)
+		thread_yield ();*/
+
+	/* Project1 (Alarm clock) */
+	// Use a new function 'thread_sleep' to avoid busy waiting
+	thread_sleep(start + ticks);
 }
 
 /* Suspends execution for approximately MS milliseconds. */
@@ -120,12 +124,29 @@ void
 timer_print_stats (void) {
 	printf ("Timer: %"PRId64" ticks\n", timer_ticks ());
 }
-
+
 /* Timer interrupt handler. */
 static void
 timer_interrupt (struct intr_frame *args UNUSED) {
 	ticks++;
 	thread_tick ();
+
+	/* Project1 (Advanced scheduler) */
+	// Recalculate load_avg, recent_cpu, priority of every thread on every tick
+	// Recalculate priority of this thread on every 4 ticks
+	if(thread_mlfqs){
+		advanced_increment();
+		if(ticks % 4 == 0){
+			advanced_recalculate_priority();
+			if(ticks % TIMER_FREQ == 0){
+				advanced_load_avg();
+				advanced_recalculate_recent_cpu();
+			}
+		}
+	}
+	/* Project1 (Alarm clock) */
+	// Wake up the thread by timer interrupt
+	if(next_tick() <= ticks) thread_awake(ticks);
 }
 
 /* Returns true if LOOPS iterations waits for more than one timer

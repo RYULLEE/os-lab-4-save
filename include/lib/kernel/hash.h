@@ -97,4 +97,11 @@ uint64_t hash_bytes (const void *, size_t);
 uint64_t hash_string (const char *);
 uint64_t hash_int (int);
 
+/* Project3 (Memory management) */
+uint64_t hash_index(struct hash_elem *e, void *aux);
+bool hash_less(struct hash_elem *e1, struct hash_elem *e2, void *aux);
+
+/* Project3 (Anonymous page) */
+void hash_break(struct hash_elem *e, void *aux);
+
 #endif /* lib/kernel/hash.h */
