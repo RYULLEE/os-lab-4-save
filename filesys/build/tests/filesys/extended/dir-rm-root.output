@@ -20,8 +20,8 @@ Executing 'dir-rm-root':
 (dir-rm-root) end
 dir-rm-root: exit(0)
 Execution of 'dir-rm-root' complete.
-Timer: 92 ticks
-Thread: 35 idle ticks, 56 kernel ticks, 1 user ticks
+Timer: 94 ticks
+Thread: 30 idle ticks, 60 kernel ticks, 4 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 96 reads, 519 writes
 hd1:0: 223 reads, 0 writes

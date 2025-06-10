@@ -21,8 +21,8 @@ Executing 'read-normal':
 (read-normal) end
 read-normal: exit(0)
 Execution of 'read-normal' complete.
-Timer: 91 ticks
-Thread: 34 idle ticks, 54 kernel ticks, 3 user ticks
+Timer: 84 ticks
+Thread: 33 idle ticks, 47 kernel ticks, 4 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 226 reads, 531 writes
 hd1:0: 105 reads, 0 writes
